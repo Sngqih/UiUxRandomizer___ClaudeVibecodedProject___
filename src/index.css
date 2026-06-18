@@ -1,0 +1,65 @@
+/* Global reset + neutral app chrome. The chrome stays intentionally muted so
+   generated themes (rendered in the preview surface) are the visual focus. */
+:root {
+  --ui-bg: #0d0e12;
+  --ui-panel: #15171d;
+  --ui-panel-2: #1b1e26;
+  --ui-elev: #21242e;
+  --ui-border: #2a2e3a;
+  --ui-border-strong: #383d4c;
+  --ui-text: #e8eaf0;
+  --ui-text-dim: #9aa0b0;
+  --ui-text-faint: #6b7280;
+  --ui-brand: #7c8aff;
+  --ui-brand-2: #b07cff;
+  --ui-sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --ui-mono: ui-monospace, 'JetBrains Mono', Consolas, monospace;
+
+  color-scheme: dark;
+  font-family: var(--ui-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ui-bg);
+  color: var(--ui-text);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--ui-border);
+  border-radius: 8px;
+  border: 2px solid var(--ui-bg);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ui-border-strong);
+}

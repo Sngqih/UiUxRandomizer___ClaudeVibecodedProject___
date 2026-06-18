@@ -1,0 +1,162 @@
+// Generation "specs". HARMONIOUS is the default mode (pure color-theory).
+// Each style preset narrows the same fields to produce an on-brand vibe.
+//
+// Field reference:
+//   appearance    'light' | 'dark' | 'either'
+//   harmonies     allowed color-harmony schemes
+//   neutralSat    [min,max] saturation for backgrounds/surfaces/text tint
+//   primarySat    [min,max] saturation for the primary color
+//   accentSat     [min,max] saturation for the accent color
+//   backgrounds   allowed background styles
+//   fontVibes     null = any pairing; otherwise filter FONT_PAIRS by these tags
+//   radius        [min,max] corner radius in px
+//   stroke        discrete icon stroke widths to choose from
+
+export const HARMONIOUS = {
+  key: 'harmonious',
+  label: 'Harmonious',
+  appearance: 'either',
+  harmonies: ['monochromatic', 'analogous', 'complementary', 'split', 'triadic', 'tetradic'],
+  neutralSat: [8, 22],
+  primarySat: [55, 85],
+  accentSat: [60, 92],
+  backgrounds: ['solid', 'linear', 'radial', 'mesh', 'dots', 'grid'],
+  fontVibes: null,
+  radius: [4, 16],
+  stroke: [1.5, 1.75, 2],
+};
+
+export const PRESETS = {
+  minimal: {
+    key: 'minimal',
+    label: 'Minimal',
+    appearance: 'light',
+    harmonies: ['monochromatic', 'analogous'],
+    neutralSat: [3, 10],
+    primarySat: [12, 45],
+    accentSat: [20, 55],
+    backgrounds: ['solid', 'linear'],
+    fontVibes: ['minimal', 'editorial', 'clean', 'modern'],
+    radius: [2, 8],
+    stroke: [1.25, 1.5],
+  },
+  neon: {
+    key: 'neon',
+    label: 'Neon',
+    appearance: 'dark',
+    harmonies: ['complementary', 'split', 'triadic', 'analogous'],
+    neutralSat: [18, 34],
+    primarySat: [85, 100],
+    accentSat: [88, 100],
+    backgrounds: ['mesh', 'radial', 'grid', 'solid'],
+    fontVibes: ['tech', 'futuristic', 'geometric', 'bold'],
+    radius: [4, 12],
+    stroke: [1.5, 2],
+  },
+  pastel: {
+    key: 'pastel',
+    label: 'Pastel',
+    appearance: 'light',
+    harmonies: ['analogous', 'triadic', 'tetradic'],
+    neutralSat: [14, 30],
+    primarySat: [40, 62],
+    accentSat: [45, 68],
+    backgrounds: ['solid', 'linear', 'mesh', 'dots'],
+    fontVibes: ['friendly', 'playful', 'geometric', 'minimal'],
+    radius: [10, 22],
+    stroke: [1.5, 1.75],
+  },
+  retro: {
+    key: 'retro',
+    label: 'Retro',
+    appearance: 'either',
+    harmonies: ['analogous', 'complementary', 'split'],
+    neutralSat: [16, 32],
+    primarySat: [55, 80],
+    accentSat: [60, 88],
+    backgrounds: ['solid', 'linear', 'dots', 'grid'],
+    fontVibes: ['retro', 'condensed', 'bold', 'playful'],
+    radius: [2, 8],
+    stroke: [1.75, 2],
+  },
+  brutalist: {
+    key: 'brutalist',
+    label: 'Brutalist',
+    appearance: 'light',
+    harmonies: ['complementary', 'triadic'],
+    neutralSat: [0, 6],
+    primarySat: [70, 100],
+    accentSat: [80, 100],
+    backgrounds: ['solid', 'grid'],
+    fontVibes: ['bold', 'condensed', 'mono', 'tech'],
+    radius: [0, 2],
+    stroke: [2, 2.5],
+  },
+  earthy: {
+    key: 'earthy',
+    label: 'Earthy',
+    appearance: 'either',
+    harmonies: ['analogous', 'monochromatic'],
+    neutralSat: [10, 24],
+    primarySat: [32, 58],
+    accentSat: [40, 66],
+    backgrounds: ['solid', 'linear', 'radial'],
+    fontVibes: ['organic', 'editorial', 'serif', 'elegant'],
+    radius: [6, 16],
+    stroke: [1.5, 1.75],
+  },
+  corporate: {
+    key: 'corporate',
+    label: 'Corporate',
+    appearance: 'light',
+    harmonies: ['monochromatic', 'analogous', 'complementary'],
+    neutralSat: [6, 16],
+    primarySat: [50, 75],
+    accentSat: [55, 80],
+    backgrounds: ['solid', 'linear'],
+    fontVibes: ['corporate', 'modern', 'clean', 'minimal'],
+    radius: [4, 10],
+    stroke: [1.5, 1.75],
+  },
+  vaporwave: {
+    key: 'vaporwave',
+    label: 'Vaporwave',
+    appearance: 'dark',
+    harmonies: ['split', 'triadic', 'tetradic'],
+    neutralSat: [22, 40],
+    primarySat: [70, 95],
+    accentSat: [78, 98],
+    backgrounds: ['mesh', 'radial', 'grid'],
+    fontVibes: ['retro', 'futuristic', 'playful', 'bold'],
+    radius: [6, 16],
+    stroke: [1.5, 2],
+  },
+  playful: {
+    key: 'playful',
+    label: 'Playful',
+    appearance: 'light',
+    harmonies: ['triadic', 'tetradic', 'split'],
+    neutralSat: [12, 26],
+    primarySat: [60, 90],
+    accentSat: [70, 95],
+    backgrounds: ['solid', 'mesh', 'dots', 'linear'],
+    fontVibes: ['playful', 'friendly', 'bold', 'geometric'],
+    radius: [14, 26],
+    stroke: [1.75, 2],
+  },
+  darkpro: {
+    key: 'darkpro',
+    label: 'Dark Pro',
+    appearance: 'dark',
+    harmonies: ['monochromatic', 'analogous', 'complementary'],
+    neutralSat: [8, 18],
+    primarySat: [45, 72],
+    accentSat: [55, 82],
+    backgrounds: ['solid', 'linear', 'radial', 'grid'],
+    fontVibes: ['tech', 'modern', 'minimal', 'clean'],
+    radius: [4, 12],
+    stroke: [1.5, 1.75],
+  },
+};
+
+export const PRESET_LIST = Object.values(PRESETS);
