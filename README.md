@@ -79,7 +79,37 @@ npm install
 npm run dev      # start the dev server (http://localhost:5173)
 npm run build    # production build into dist/
 npm run preview  # preview the production build
+npm run samples  # (optional) drop example photos into src/assets/photos/
+npm run fonts    # (optional) re-download the self-hosted fonts
 ```
+
+Fonts are **self-hosted** (`src/assets/fonts/`) so the app works fully offline —
+no Google Fonts / CDN dependency at runtime.
+
+## Deploy & sharing
+
+This is a fully static, client-side app — no server or database — so it can be
+hosted for free anywhere. The build path is relative (`base: './'`), so the `dist/`
+output works at a domain root *or* under a sub-path.
+
+- **GitHub Pages** — push to GitHub, then Settings → Pages → Source: **GitHub
+  Actions**. The included [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)
+  builds and publishes on every push to `main`.
+- **Vercel** — "Import" the repo; it auto-detects Vite (build `npm run build`,
+  output `dist`). No config needed.
+- **Netlify** — "Add new site → Import"; [`netlify.toml`](netlify.toml) sets the
+  build for you.
+- **Any static host / S3 / nginx** — run `npm run build` and upload `dist/`.
+
+**How other people use it:**
+- **End users** just open the deployed link — nothing to install or clone.
+- **Developers** who want to run or modify it: `git clone …` → `npm install` →
+  `npm run dev`.
+- Note: you can't simply double-click `dist/index.html` (ES modules need to be
+  served over http). Use a host, or `npm run preview` locally.
+
+Uploaded photos live in the visitor's own browser (IndexedDB); folder photos in
+`src/assets/photos/` ship with the build.
 
 ## How it's organized
 
