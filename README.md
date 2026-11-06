@@ -3,6 +3,11 @@
 Generate complete UI designs at random — layout/structure, background, color
 scheme, font pairing, and icon set — then preview them live and export the result.
 
+**▶ Try it in your browser, nothing to install:
+<https://sngqih.github.io/UiUxRandomizer___ClaudeVibecodedProject___/>**
+
+Want to run or change it yourself? See [Run it](#run-it).
+
 ## Features
 
 - **Layout engine** — every roll produces a structurally different design, not just
@@ -73,6 +78,15 @@ scheme, font pairing, and icon set — then preview them live and export the res
 - **Keyboard**: press <kbd>Space</kbd> to generate a new theme.
 
 ## Run it
+
+You need [Node.js](https://nodejs.org) (the LTS version). Get the code with
+**Code → Download ZIP** on GitHub, or `git clone` it.
+
+**Windows, the easy way:** double-click **`Start Theme Randomizer.bat`**. The first
+time it installs the packages (about 10 seconds), then your browser opens the app.
+Close the black window to stop it.
+
+**Any system, from a terminal** in the project folder:
 
 ```bash
 npm install
